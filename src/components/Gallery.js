@@ -65,6 +65,7 @@ export default class Gallery extends React.Component {
                 <Pictures 
                 pictures={this.state.pictures}
                 selectedPicture={this.selectedPicture}
+                className="picture-container"
                 />
                 <PictureInfo
                 showpic={this.state.showpic}

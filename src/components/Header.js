@@ -16,7 +16,7 @@ searchQuery = (event) => {
                 likes:data.results[i].likes,
                 user:data.results[i].user.name,
                 social:data.results[i].user.instagram_username,
-                url:data.results[i].links.download            
+                url:data.results[i].urls.small          
             };
             this.props.changePictures(dataImg);
         };

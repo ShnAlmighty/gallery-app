@@ -14,7 +14,7 @@ export default class Gallery extends React.Component {
         return new Promise((resolve) => setTimeout(resolve, milliseconds));
       };
     generateImages = () => {
-            fetch(`https://api.unsplash.com/photos?client_id=cQ3X5ZdQwCuCdLxmPV3PPd7jiV44c61GOalNVjNBom0`)
+            fetch(`https://api.unsplash.com/photos?client_id=cQ3X5ZdQwCuCdLxmPV3PPd7jiV44c61GOalNVjNBom0&w=360`)
             .then(response=>response.json())
             .then((data)=>{
                 for(var i=0;i<data.length;i++){
@@ -23,7 +23,7 @@ export default class Gallery extends React.Component {
                     likes:data[i].likes,
                     user:data[i].user.name,
                     social:data[i].user.instagram_username,
-                    url:data[i].links.download,
+                    url:data[i].urls.small,
                     selected:undefined
                 };
                 this.setState((prevState)=>({ pictures:prevState.pictures.concat(pic) }));
@@ -50,19 +50,7 @@ export default class Gallery extends React.Component {
     };
     componentDidMount(){
         this.generateImages();
-        // this.sleep(1000)
-        // .then(()=>{
-        //     this.generateImages();
-        //     this.setState(()=>({ loading: false }));
-        // });
     };
-    // componentWillUnmount(){
-    //     this.sleep(1000)
-    //     .then(()=>{
-    //         this.setState(()=>({ loading: false }));
-    //     });
-    //     alert('end');
-    // }
     render(){
         return(
             <div>

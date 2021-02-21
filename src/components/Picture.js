@@ -8,9 +8,6 @@ const Picture = (props) => (
                 key={props.picture.url}
                 src={props.picture.url}
                 className="images"
-                height="480"
-                alt="Loading"
-                width="360"
                 >
                 </img>
                 </div>

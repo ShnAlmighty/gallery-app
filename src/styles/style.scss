@@ -64,16 +64,16 @@ button:focus{
     width: 25vw;
     border-radius: 2vw;
     margin:0 auto;
-    margin-bottom:1vw;
+    margin-bottom:2vw;
     background-color:rgb(0, 130, 216);
 }
 .Modal{
     text-align: center;
     background-image: url('../../public/images/background1.jpg');
     background-size: cover;
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     // background-color: rgb(188, 147, 241);
-    height: auto;
+    height: 43vw;
     width:90vw;
     margin-left: 5vw;
     padding-top: 1vw;
@@ -82,6 +82,9 @@ button:focus{
 .modalImage{
     height:80vh;
     width:50vw;
+    border:outset;
+    border-radius: 0.2vw;
+    border-color: burlywood;
 }
 .images{
     margin:1vw; 
@@ -108,4 +111,62 @@ button:focus{
 }
 .imgContainer{
     display: inline;
+}
+@media screen and (max-width:480px) {
+    .Header{
+        width:100%;
+        height:100%;
+        padding-bottom:0.3vw;
+        padding-top:0.3vw;
+        background-color:rgb(0, 13, 68);
+        border:outset;
+        border-color:gold;
+        color:$brand-color;
+    }
+    .searchBar{
+        width:80%;
+        height:5vh;
+        border-radius: 5vw;
+        padding-left: 3vw;
+        margin-bottom: 2vw;
+    }
+    .images{ 
+        height:30vh;
+        width:80vw;
+        margin:3vw auto;
+
+    }
+    .imgContainer{
+        width: auto;
+        margin:5vw auto;
+    }
+    .picHeading{
+        height: 5vh;
+        width: 60vw;
+        margin:4vw auto;
+        font-size: 6vw;
+    }
+    button{
+        width: 70%;
+        height: 70%;
+        margin-bottom: 3vw;
+    }
+    .modalImage{
+        height: 40vh;
+        width: 70vw;
+        left:5vw;
+    }
+    .picInfo{
+        position: relative;
+        height: auto;
+        width: 60vw;
+        margin-top:1vw;
+        padding:0.1vw;
+        left:18vw;
+        text-align: center;
+    }
+    .Modal{
+        height: 100%;
+        width: auto;
+    }
 }

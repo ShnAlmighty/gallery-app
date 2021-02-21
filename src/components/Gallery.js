@@ -37,7 +37,6 @@ export default class Gallery extends React.Component {
     };
     resetPictures = () => {
         this.setState(()=>({ pictures:[] }));
-        // this.setState(()=>({loading:false}));
     };
     changePictures = (value) => {
         this.setState((prevState)=>({pictures:prevState.pictures.concat(value)}));

@@ -8,7 +8,7 @@ const PictureInfo = (props) => (
         contentLabel="Picture Information"
         className="Modal"
     >
-    <h3>Picture Information</h3>
+    <h1 className="picHeading">Information</h1>
     {
         props.showpic && <div className="ModalInfo"> <img src={props.showpic.url} 
         className="modalImage" />

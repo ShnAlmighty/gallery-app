@@ -20,7 +20,7 @@ searchQuery = (event) => {
             };
             this.props.changePictures(dataImg);
         };
-     })
+    })
     .catch((e)=>{
         console.log(e);
     });

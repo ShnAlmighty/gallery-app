@@ -1,6 +1,6 @@
 $brand-color:rgb(126, 126, 252);
 *{
-    color:$brand-color;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #app{
     text-align: center;
@@ -13,6 +13,7 @@ $brand-color:rgb(126, 126, 252);
     background-color:rgb(0, 13, 68);
     border:outset;
     border-color:gold;
+    color:$brand-color;
 }
 .pictures{
     margin-top:3vw;
@@ -22,6 +23,7 @@ $brand-color:rgb(126, 126, 252);
     margin: 1vw;
 }
 .picInfo{
+    color: white;
     border:groove;
     border-radius:0.2vw;
     border-radius:lightpink;
@@ -29,9 +31,9 @@ $brand-color:rgb(126, 126, 252);
     width:15vw;
     position: absolute;
     top:10vw;
-    left:78vw;
-    // margin-left:37vw;
-    background-color:white;
+    // left:78vw;
+    left:76.5vw;
+    background-color:rgb(255, 164, 103);
     visibility: visible;
     text-align: left;
     padding:1vw;
@@ -51,11 +53,29 @@ button:hover{
     transition: 0.7s;
     color:white;
 }
+button:focus{
+    outline: none;
+}
+.picHeading{
+    color:lightyellow;
+    border:outset;
+    border-radius: 0.2vw;
+    border-color:lightyellow;
+    width: 25vw;
+    border-radius: 2vw;
+    margin:0 auto;
+    margin-bottom:1vw;
+    background-color:rgb(0, 130, 216);
+}
 .Modal{
     text-align: center;
-    background-color:white;
+    background-image: url('../../public/images/background1.jpg');
+    background-size: cover;
+    margin-top: 1.5vw;
+    // background-color: rgb(188, 147, 241);
     height: auto;
-    width:auto;
+    width:90vw;
+    margin-left: 5vw;
     padding-top: 1vw;
     padding-bottom: 1vw;
 }
@@ -74,7 +94,8 @@ button:hover{
 .images:hover{
     cursor: pointer;
     transform: scale(1.1);
-    transition: 1s;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw rgb(116, 115, 115);
+    transition: 0.5s;
 }
 .searchBar{
     width:50vw;

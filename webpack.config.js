@@ -6,6 +6,7 @@ module.exports = {
         path:path.join(__dirname, 'public'),
         filename:'bundle.js'
     },
+    target:'web',
     module:{
         rules:[{
             loader:'babel-loader',

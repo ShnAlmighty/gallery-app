@@ -58,7 +58,11 @@ export default class Gallery extends React.Component {
                 resetPictures={this.resetPictures}
                 generateImages={this.generateImages}
                 />
-                {this.state.loading && <Loading loading={this.state.loading}/>}
+                {this.state.loading &&
+                <Loading 
+                loading={this.state.loading}
+                />
+                }
                 <Pictures 
                 pictures={this.state.pictures}
                 selectedPicture={this.selectedPicture}

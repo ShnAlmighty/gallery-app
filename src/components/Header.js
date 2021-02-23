@@ -22,7 +22,7 @@ searchQuery = (event) => {
         };
     })
     .catch((e)=>{
-        alert('Server Overload. Please wait for some time. We are sorry for the inconvenience.');
+        //alert('Server Overload. Please wait for some time. We are sorry for the inconvenience.');
         console.log(e);
     });
 }else{

@@ -2,8 +2,9 @@ import React from 'react';
 
 const ShowDetail = (props) => (
     <div className="loader center">
+    <h3 className="loadingDiv"> Loading....</h3>
     { props.loading && 
-      <i className="fa fa-sync fa-spin" />
+      <i id="loadingIcon" className="fa fa-sync fa-spin" />
     }
     </div>
 );

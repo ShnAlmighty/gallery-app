@@ -33,13 +33,12 @@ export default class Gallery extends React.Component {
             .catch((e)=>{
                 console.log(e);
             });
-            this.setState(()=>({loading:false}));
     };
     resetPictures = () => {
-        this.setState(()=>({ pictures:[] }));
+        this.setState(()=>({ pictures:[],loading:true }));
     };
     changePictures = (value) => {
-        this.setState((prevState)=>({pictures:prevState.pictures.concat(value)}));
+        this.setState((prevState)=>({pictures:prevState.pictures.concat(value),loading:false}));
     };
     selectedPicture = (pic) => {
         this.setState(()=>({ showpic: pic }));
@@ -50,6 +49,15 @@ export default class Gallery extends React.Component {
     componentDidMount(){
         this.generateImages();
     };
+    handleLoadingStateFalse(){
+        alert('false');
+        this.setState(()=>({loading: false}));
+        console.log('false...');
+    }
+    handleLoadingStateTrue(){
+        this.setState(()=>({loading: true}));
+        console.log('true...');
+    }
     render(){
         return(
             <div>
@@ -58,7 +66,8 @@ export default class Gallery extends React.Component {
                 changePictures={this.changePictures}
                 resetPictures={this.resetPictures}
                 generateImages={this.generateImages}
-                handleLoading={this.handleLoading}
+                handleLoadingStateTrue={this.handleLoadingStateTrue}
+                handleLoadingStateFalse={this.handleLoadingStateFalse}
                 />
                 {this.state.loading && <Loading loading={this.state.loading}/>}
                 <Pictures 
